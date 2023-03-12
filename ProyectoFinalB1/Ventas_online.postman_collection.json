@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "01131f4a-ad12-4a8b-9d60-53bebea8d695",
+		"name": "Ventas_online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Anderson",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "Garcia",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "AndersonG@kinal.edu.gt",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12456789",
+									"type": "default"
+								},
+								{
+									"key": "rol",
+									"value": "CLIENT",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3007/api/create-user",
+							"host": [
+								"localhost"
+							],
+							"port": "3007",
+							"path": [
+								"api",
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "jcastro-2021416@kinal.edu.gt",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "castro2004",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/login-user",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"login-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upadte-user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDA2NWQxOGI1MzVjNTcxMWNkNWFhZWEiLCJ1c2VybmFtZSI6IkFuZGVyc29uIiwiZW1haWwiOiJBbmRlcnNvbkdAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4MTQ2MDg1LCJleHAiOjE2NzgxNDk2ODV9.gRTI6HlujAYtj2anKkk238UyTP6DerBvZUGjJWrp8Ow",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Diego",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3007/api/update-user/64065d18b535c5711cd5aaea",
+							"host": [
+								"localhost"
+							],
+							"port": "3007",
+							"path": [
+								"api",
+								"update-user",
+								"64065d18b535c5711cd5aaea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDA2NWQxOGI1MzVjNTcxMWNkNWFhZWEiLCJ1c2VybmFtZSI6IkRpZWdvIiwiZW1haWwiOiJBbmRlcnNvbkdAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4MTQ2MTY0LCJleHAiOjE2NzgxNDk3NjR9.uqwIBN9M-jCE7T19WjwY1KIeJKREL7atylS0z7NaXg0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3007/api/delete-user",
+							"host": [
+								"localhost"
+							],
+							"port": "3007",
+							"path": [
+								"api",
+								"delete-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "producto",
+			"item": [
+				{
+					"name": "list-producto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3008/api/list-product",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"list-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4MzMzODU5LCJleHAiOjE2NzgzMzc0NTl9.SmFOnLd0X4y0rv15ye7OVSTMS877q6Cs8EIlQYKIeP4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Chomilk",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Leche con sabor a chocolate",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "48.20",
+									"type": "default"
+								},
+								{
+									"key": "stock",
+									"value": "16",
+									"type": "default"
+								},
+								{
+									"key": "categoryName",
+									"value": "Suplementos",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/create-product",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"create-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3007/api/delete-product/64011005bb027d5ea6e82d79",
+							"host": [
+								"localhost"
+							],
+							"port": "3007",
+							"path": [
+								"api",
+								"delete-product",
+								"64011005bb027d5ea6e82d79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-product-name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDIyNjMxLCJleHAiOjE2Nzg0MjYyMzF9.a5g_6Xdvtumzpoq1feLLILDc0Z1qa_UpLi0N657yqAU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Chomilk",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/read-product-Name",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"read-product-Name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDIyNjMxLCJleHAiOjE2Nzg0MjYyMzF9.a5g_6Xdvtumzpoq1feLLILDc0Z1qa_UpLi0N657yqAU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "chocomilk :D",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/product-update/640abfc200ba15138f6f0aaa?",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"product-update",
+								"640abfc200ba15138f6f0aaa"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "producto-sout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDIyNjMxLCJleHAiOjE2Nzg0MjYyMzF9.a5g_6Xdvtumzpoq1feLLILDc0Z1qa_UpLi0N657yqAU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3008/api/product-soldout",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"product-soldout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuyProduct",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "list-category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDIyNjMxLCJleHAiOjE2Nzg0MjYyMzF9.a5g_6Xdvtumzpoq1feLLILDc0Z1qa_UpLi0N657yqAU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Suplementos",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/list-categoryName",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"list-categoryName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4MTUzNDI0LCJleHAiOjE2NzgxNTcwMjR9.onlpoaIOPgLN_Ph326RDeKZn0uYp64Xw4nksiQf69DI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Suplementos",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Suplementos para ayudar con las ganancias de masa muscular\n",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/create-category",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"create-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDIyNjMxLCJleHAiOjE2Nzg0MjYyMzF9.a5g_6Xdvtumzpoq1feLLILDc0Z1qa_UpLi0N657yqAU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Suplemento",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/edit-category/640698256981f24e5d1d046d",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"edit-category",
+								"640698256981f24e5d1d046d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-category-name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2M2ZkOTA4ZTFiMDZmNWIyOTIyOGI4ZmYiLCJ1c2VybmFtZSI6IkRhdmlkIiwiZW1haWwiOiJqY2FzdHJvLTIwMjE0MTZAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDIyNjMxLCJleHAiOjE2Nzg0MjYyMzF9.a5g_6Xdvtumzpoq1feLLILDc0Z1qa_UpLi0N657yqAU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Suplemento",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/list-categoryName",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"list-categoryName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3008/api/delete-category",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"delete-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category-soldOut",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bill",
+			"item": [
+				{
+					"name": "addCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDBiYTQ4ZWUyNWUzN2E0NjE0NjNkYjMiLCJ1c2VybmFtZSI6IkVkYWdhciIsImVtYWlsIjoiRWRnYXJzaXRvQGtpbmFsLmVkdS5ndCIsImlhdCI6MTY3ODQ4NDYzNiwiZXhwIjoxNjc4NDg4MjM2fQ.kJXRUnjW3Gi37_irVdhnd202-4TLqwbXl3BFDqk81Yo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productId",
+									"value": "640abfc200ba15138f6f0aaa",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "6",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3008/api/addCart",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"addCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listCart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDBiYTgyOGZkYWFlMTY2ZWJjZWYwZmMiLCJ1c2VybmFtZSI6IkFuZGVyc29uIiwiZW1haWwiOiJBbmRlcnNvbkdAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDg1NTYwLCJleHAiOjE2Nzg0ODkxNjB9.3BjFxicHbABzyFF6D4YuPCvUdIc4GFQ6uZlpbOUOA7w",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3008/api/listCart",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"listCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDBiYTgyOGZkYWFlMTY2ZWJjZWYwZmMiLCJ1c2VybmFtZSI6IkFuZGVyc29uIiwiZW1haWwiOiJBbmRlcnNvbkdAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NDg1NTYwLCJleHAiOjE2Nzg0ODkxNjB9.3BjFxicHbABzyFF6D4YuPCvUdIc4GFQ6uZlpbOUOA7w",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3008/api/buy",
+							"host": [
+								"localhost"
+							],
+							"port": "3008",
+							"path": [
+								"api",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listShop",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
